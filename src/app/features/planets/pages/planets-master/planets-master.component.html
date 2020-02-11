@@ -2,10 +2,8 @@
   <div class="content">
     <!-- Master list view -->
     <div class="master">
-      <p>planets-master works!</p>
-      <a [routerLink]="['/planets', 2]" routerLinkActive="active"
-        >Go to planet 2</a
-      >
+      <app-header [title]="'Planets'"></app-header>
+      <app-list></app-list>
     </div>
 
     <!-- Child planet detail overlay -->

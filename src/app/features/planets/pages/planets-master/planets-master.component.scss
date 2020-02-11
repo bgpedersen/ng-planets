@@ -18,7 +18,16 @@
 }
 
 .content {
-  background-color: $white;
-  height: auto;
+  background-color: $black;
+  color: $white;
+  height: 80%;
   position: relative;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+    0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.master {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
 }
