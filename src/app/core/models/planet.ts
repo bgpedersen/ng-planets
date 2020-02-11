@@ -16,4 +16,16 @@ export class Planet {
   created: Date;
   edited: Date;
   url: string;
+
+  constructor(data?) {
+    if (data) {
+      Object.assign(this, data);
+    }
+  }
+
+  get id() {
+    // RegEx replace all except numbers with empty
+    const theId = +this.url.replace(/\D/g, '');
+    return theId;
+  }
 }

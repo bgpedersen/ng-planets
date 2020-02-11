@@ -13,9 +13,10 @@ export class PlanetsMasterComponent implements OnInit {
   planets$: Observable<Planet[]>;
 
   constructor(private swapiService: SwapiService) {
-    this.planets$ = this.swapiService
-      .getPlanets()
-      .pipe(map(res => res.results));
+    this.planets$ = this.swapiService.getPlanets().pipe(
+      map(res => res.results),
+      map(results => results.map(result => new Planet(result)))
+    );
   }
 
   ngOnInit(): void {}

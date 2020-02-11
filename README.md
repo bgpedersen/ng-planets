@@ -11,7 +11,7 @@ Small webapp to show planets and their details
 - [x] Make simple responsive effect
 - [x] Use css grid for layout and flexbox for one dimensional content
 - [x] Make swapi api http rest service + headers + error catching
-- [x] Make planet + swapi result models
+- [x] Make planet model with id getter with regex + swapi result model
 - [x] Template subscribing with else loading
 - [ ] Make header component + design
 - [ ] Make list component + design
