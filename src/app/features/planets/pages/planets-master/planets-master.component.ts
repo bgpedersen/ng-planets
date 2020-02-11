@@ -12,12 +12,12 @@ import { Planet } from 'src/app/core/models/planet';
 export class PlanetsMasterComponent implements OnInit {
   planets$: Observable<Planet[]>;
 
-  constructor(private swapiService: SwapiService) {
+  constructor(private swapiService: SwapiService) {}
+
+  ngOnInit(): void {
     this.planets$ = this.swapiService.getPlanets().pipe(
       map(res => res.results),
       map(results => results.map(result => new Planet(result)))
     );
   }
-
-  ngOnInit(): void {}
 }

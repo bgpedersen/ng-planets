@@ -1,2 +1,11 @@
-<a routerLink="/" routerLinkActive="active">Back</a>
-<p>planets-detail works!</p>
+<div class="container">
+  <div class="description">
+    <a routerLink="/" routerLinkActive="active">Back</a>
+    <span class="title">Name</span>
+    <span class="value">{{ planet.name }}</span>
+  </div>
+
+  <div class="image">
+    <img src="/assets/images/planet.png" alt="planet" />
+  </div>
+</div>

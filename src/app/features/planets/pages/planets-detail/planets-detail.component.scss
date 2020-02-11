@@ -8,3 +8,9 @@
   bottom: 0;
   background-color: $black;
 }
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}

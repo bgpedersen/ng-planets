@@ -13,6 +13,7 @@ Small webapp to show planets and their details
 - [x] Make swapi api http rest service + headers + error catching
 - [x] Make planet model with id getter with regex + swapi result model
 - [x] Template subscribing with else loading
+- [x] Shared module with loader component
 - [ ] Make header component + design
 - [ ] Make list component + design
 - [ ] Make design for master list view matching detail view

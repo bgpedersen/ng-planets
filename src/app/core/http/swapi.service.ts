@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
-import { Planet } from '../models/planet';
 import { SwapiResult } from '../models/swapi-result';
 
 @Injectable({
@@ -27,9 +26,9 @@ export class SwapiService {
       .pipe(retry(1), catchError(this.handleError));
   }
 
-  getPlanet(id: number): Observable<Planet> {
+  getPlanet(id: number): Observable<SwapiResult> {
     return this.http
-      .get<Planet>(`${this.apiUrl}/planets/${id}`)
+      .get<SwapiResult>(`${this.apiUrl}/planets/${id}`)
       .pipe(retry(1), catchError(this.handleError));
   }
 
