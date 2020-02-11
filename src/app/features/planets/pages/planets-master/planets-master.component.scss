@@ -1,15 +1,24 @@
 @import '../../../../../styles/abstracts/variables';
 
-:host {
-  height: 100vh;
-}
-
 .container {
   height: 100%;
-  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  background-color: $blue-darken;
-  color: $white;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/images/background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 961px) {
+    grid-template-columns: 60%;
+  }
+}
+
+.content {
+  background-color: $white;
+  height: auto;
+  position: relative;
 }

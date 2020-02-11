@@ -1,9 +1,14 @@
 <div class="container">
   <div class="content">
-    <p>planets-master works!</p>
-    <a [routerLink]="['/planets', 2]" routerLinkActive="active"
-      >Go to planet 2</a
-    >
+    <!-- Master list view -->
+    <div class="master">
+      <p>planets-master works!</p>
+      <a [routerLink]="['/planets', 2]" routerLinkActive="active"
+        >Go to planet 2</a
+      >
+    </div>
+
+    <!-- Child planet detail overlay -->
     <router-outlet></router-outlet>
   </div>
 </div>
