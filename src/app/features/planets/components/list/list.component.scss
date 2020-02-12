@@ -1,0 +1,21 @@
+@import '../../../../../styles/abstracts/variables';
+.container {
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.planet-item {
+  width: 100%;
+  margin: 5px;
+  //   margin: 10px 25px;
+  //   padding: 10px 25px;
+  height: 100px;
+  background-color: darken($blue, 60%);
+  color: $blue;
+  cursor: pointer;
+}

@@ -1,9 +1,12 @@
 <div class="container">
   <div class="content" *ngIf="planets$ | async; let planets; else: loading">
-    <div *ngFor="let planet of planets" class="planet">
-      <a [routerLink]="['/planets', planet.id]" routerLinkActive="active">{{
-        planet.name
-      }}</a>
+    <div
+      *ngFor="let planet of planets"
+      class="planet-item"
+      [routerLink]="['/planets', planet.id]"
+      routerLinkActive="active"
+    >
+      {{ planet.name }}
     </div>
   </div>
   <ng-template #loading>
