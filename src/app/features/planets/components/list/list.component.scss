@@ -4,23 +4,66 @@
 }
 
 .container {
-  background-color: $black;
-  color: $white;
+  height: 100%;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: center;
-  padding: 10px 25px;
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  grid-auto-rows: auto;
+  grid-auto-columns: 1fr;
+  gap: 20px;
+  background-color: $black;
 }
 
 .planet-item {
-  width: 100%;
-  margin: 5px;
-  height: 100px;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    'image title'
+    'image description';
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 2fr;
   background-color: darken($blue, 60%);
   color: $blue;
   cursor: pointer;
+}
+
+.image {
+  grid-area: image;
+  justify-self: center;
+  img {
+    max-width: 100%;
+    max-height: 150px;
+  }
+}
+
+.title {
+  grid-area: title;
+  align-self: end;
+  color: $white;
+  font-size: 2rem;
+  border-bottom: 1px solid darken($blue, 40%);
+  margin-right: 50px;
+}
+
+.description {
+  padding: 0 10px 10px 0;
+  grid-area: description;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  .info-container {
+    .title {
+      color: $blue;
+      border-bottom: 1px solid darken($blue, 60%);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin: 20px 0 5px 0;
+    }
+    .value {
+      color: $blue-darken;
+      font-size: 1.3rem;
+    }
+  }
 }

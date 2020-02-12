@@ -14,10 +14,11 @@ Small webapp to show planets and their details
 - [x] Make planet model with id getter with regex + swapi result model
 - [x] Template subscribing with else loading
 - [x] Shared module with loader component
-- [ ] Make header component + design
+- [x] Make header component + design
 - [ ] Make list component + design
 - [ ] Make design for master list view matching detail view
 - [ ] Make detail view matching the design
+- [ ] Remove fake apis
 - [ ] Optimize images ?
 - [ ] Make router transition animation ?
 - [ ] Add some tests ?

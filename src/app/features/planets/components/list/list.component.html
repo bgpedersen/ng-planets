@@ -6,7 +6,24 @@
       [routerLink]="['/planets', planet.id]"
       routerLinkActive="active"
     >
-      {{ planet.name }}
+      <div class="image">
+        <img src="/assets/images/planet.png" alt="planet" />
+      </div>
+      <div class="title">{{ planet.name }}</div>
+      <div class="description">
+        <div class="info-container">
+          <div class="title">diameter (i km)</div>
+          <div class="value">{{ planet.diameter }}</div>
+        </div>
+        <div class="info-container">
+          <div class="title">tyngdekraft</div>
+          <div class="value">{{ planet.gravity }}</div>
+        </div>
+        <div class="info-container">
+          <div class="title">terræn</div>
+          <div class="value">{{ planet.terrain }}</div>
+        </div>
+      </div>
     </div>
   </div>
   <ng-template #loading>
