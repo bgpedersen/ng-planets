@@ -25,12 +25,26 @@
     'image description';
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 2fr;
-  background-color: darken($blue, 60%);
+  // background-color: darken($blue, 60%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 17%,
+    rgba(0, 4, 43, 1) 100%
+  );
   color: $blue;
   cursor: pointer;
+  border-radius: 10px;
   transition: all ease-in-out 0.1s;
   &:hover {
-    background-color: darken($blue, 55%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(22, 22, 115, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    );
   }
 }
 
@@ -43,7 +57,7 @@
   }
 }
 
-.title {
+.planet-title {
   grid-area: title;
   align-self: end;
   color: $white;
@@ -60,7 +74,6 @@
   .info-container {
     .title {
       color: $blue;
-      border-bottom: 1px solid darken($blue, 60%);
       text-transform: uppercase;
       font-size: 0.8rem;
       margin: 20px 0 5px 0;
