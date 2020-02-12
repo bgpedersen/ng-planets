@@ -1,11 +1,13 @@
 <div class="planets-detail container">
-  <div class="content" *ngIf="planetFake$ | async; let planet; else: loading">
+  <div class="content" *ngIf="planet$ | async; let planet; else: loading">
     <app-header [title]="planet.name"></app-header>
     <app-detail [planet]="planet"></app-detail>
   </div>
 
   <ng-template #loading>
-    <app-header [title]=""></app-header>
-    <app-loading></app-loading>
+    <div class="content">
+      <app-header [title]=""></app-header>
+      <app-loading></app-loading>
+    </div>
   </ng-template>
 </div>

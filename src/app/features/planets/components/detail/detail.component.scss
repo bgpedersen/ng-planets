@@ -30,7 +30,7 @@
       margin: 20px 0 5px 0;
     }
     .value {
-      color: $blue-darken;
+      color: lighten($blue, 20%);
       font-size: 1.6rem;
     }
   }
@@ -45,10 +45,27 @@
 
 .back {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: 20px;
   padding: 16px 25px;
   font-size: 1.3rem;
-  color: $blue;
+  color: lighten($blue, 20%);
   text-decoration: none;
+  background-color: lighten($black, 10%);
+  border-radius: 25px;
+  transition: all ease-in-out 0.1s;
+  &:hover {
+    background-color: lighten($black, 20%);
+  }
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+i {
+  border: solid lighten($blue, 20%);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
 }

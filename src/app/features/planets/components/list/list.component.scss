@@ -28,6 +28,10 @@
   background-color: darken($blue, 60%);
   color: $blue;
   cursor: pointer;
+  transition: all ease-in-out 0.1s;
+  &:hover {
+    background-color: darken($blue, 55%);
+  }
 }
 
 .image {
@@ -62,8 +66,12 @@
       margin: 20px 0 5px 0;
     }
     .value {
-      color: $blue-darken;
+      color: lighten($blue, 20%);
       font-size: 1.3rem;
     }
   }
+}
+
+.content-loading {
+  height: 100%;
 }

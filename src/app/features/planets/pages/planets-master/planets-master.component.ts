@@ -15,15 +15,21 @@ export class PlanetsMasterComponent implements OnInit {
 
   constructor(private swapiService: SwapiService) {}
 
+  sortArray(list, prop) {
+    return list.sort((a, b) => (a[prop] > b[prop] ? 1 : -1));
+  }
+
   ngOnInit(): void {
     this.planets$ = this.swapiService.getPlanets().pipe(
       map(res => res.results),
-      map(results => results.map(result => new Planet(result)))
+      map(results => results.map(result => new Planet(result))),
+      map(results => this.sortArray(results, 'name'))
     );
 
     this.planetsFake$ = this.swapiService.getFakePlanets().pipe(
       map(res => res.results),
-      map(results => results.map(result => new Planet(result)))
+      map(results => results.map(result => new Planet(result))),
+      map(results => this.sortArray(results, 'name'))
     );
   }
 }

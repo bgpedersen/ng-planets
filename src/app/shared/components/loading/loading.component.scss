@@ -1,4 +1,8 @@
+@import '../../../../styles/abstracts/variables';
+
 .loading {
+  color: lighten($blue, 20%);
+  background-color: $black;
   display: flex;
   height: 100%;
   align-items: center;
