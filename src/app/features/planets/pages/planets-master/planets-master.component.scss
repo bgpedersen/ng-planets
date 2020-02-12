@@ -4,6 +4,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 80%;
   padding: 10px;
   align-items: center;
   justify-content: center;
@@ -20,7 +21,7 @@
 .content {
   background-color: $black;
   color: $white;
-  // height: 80%;
+  height: 100%;
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
     0 6px 20px 0 rgba(255, 255, 255, 0.19);
