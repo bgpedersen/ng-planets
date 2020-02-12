@@ -1,8 +1,29 @@
 <div class="container">
+  <a routerLink="/" routerLinkActive="active" class="back"
+    >Tilbage til planeterne</a
+  >
+
   <div class="description">
-    <a routerLink="/" routerLinkActive="active">Back</a>
-    <span class="title">Name</span>
-    <span class="value">{{ planet.name }}</span>
+    <div class="info-container">
+      <div class="title">navn</div>
+      <div class="value">{{ planet.name }}</div>
+    </div>
+    <div class="info-container">
+      <div class="title">diameter (i km)</div>
+      <div class="value">{{ planet.diameter }}</div>
+    </div>
+    <div class="info-container">
+      <div class="title">tyngdekraft</div>
+      <div class="value">{{ planet.gravity }}</div>
+    </div>
+    <div class="info-container">
+      <div class="title">terræn</div>
+      <div class="value">{{ planet.terrain }}</div>
+    </div>
+    <div class="info-container">
+      <div class="title">beboer antal</div>
+      <div class="value">{{ planet.population }}</div>
+    </div>
   </div>
 
   <div class="image">

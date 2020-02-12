@@ -1,16 +1,51 @@
 @import '../../../../../styles/abstracts/variables';
 
 .container {
+  position: relative;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr;
-  /* grid-template-rows: 90%; */
-  /* height: 100%; */
-  /* padding: 20px; */
   align-items: center;
   justify-items: center;
+  grid-template-areas: 'description image';
+  padding-left: 50px;
 }
 
-img {
-  max-width: 100%;
+.description {
+  grid-area: description;
+  justify-self: left;
+  padding-left: 25px;
+  width: 100%;
+
+  .info-container {
+    .title {
+      color: $blue;
+      border-bottom: 1px solid darken($blue, 60%);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin: 20px 0 5px 0;
+    }
+    .value {
+      color: $blue-darken;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.image {
+  grid-area: image;
+  img {
+    max-width: 100%;
+  }
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px 25px;
+  font-size: 1.3rem;
+  color: #6fa2ff;
+  text-decoration: none;
 }
