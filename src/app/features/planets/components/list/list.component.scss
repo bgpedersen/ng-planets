@@ -1,6 +1,13 @@
 @import '../../../../../styles/abstracts/variables';
-.container {
+:host {
+  overflow: auto;
 }
+
+.container {
+  background-color: $black;
+  color: $white;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -12,8 +19,6 @@
 .planet-item {
   width: 100%;
   margin: 5px;
-  //   margin: 10px 25px;
-  //   padding: 10px 25px;
   height: 100px;
   background-color: darken($blue, 60%);
   color: $blue;

@@ -1,10 +1,8 @@
-<div class="container">
+<div class="planets-master container">
   <div class="content">
-    <!-- Master list view -->
-    <div class="master">
-      <app-header [title]="'Planets'"></app-header>
-      <app-list [planets$]="planetsPlaceholder$"></app-list>
-    </div>
+    <app-header class="header" [title]="'Planeter'"></app-header>
+
+    <app-list class="list" [planets$]="planetsFake$"></app-list>
 
     <!-- Child planet detail overlay -->
     <router-outlet></router-outlet>

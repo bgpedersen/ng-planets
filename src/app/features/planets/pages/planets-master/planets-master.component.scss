@@ -5,8 +5,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 80%;
-  padding: 10px;
-  align-items: center;
+  align-content: center;
   justify-content: center;
   background-image: url('/assets/images/background.png');
   background-position: center;
@@ -19,16 +18,21 @@
 }
 
 .content {
-  background-color: $black;
-  color: $white;
   height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header'
+    'list';
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
     0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
 
-.master {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 65px 1fr;
+.header {
+  grid-area: header;
+}
+
+.list {
+  grid-area: list;
 }
